@@ -25,7 +25,6 @@ A full-stack MERN-based Job Board web application built with Node.js, Express, M
 - **Shadcn/UI**: Component library for consistent UI
 - **Lucide React**: Icon library
 - **Sonner**: Toast notifications
-- **Axios**: HTTP client for API requests
 
 ## 📁 Project Structure
 
@@ -83,14 +82,18 @@ job-board/
    
    Create a `.env` file in the backend directory with the following:
    ```env
-   MONGO_URL=mongodb://localhost:27017
+   MONGO_URI=mongodb://localhost:27017
    DB_NAME=job_board_db
+
    ```
 
 4. **Start MongoDB:**
    
    Make sure MongoDB is running on your system:
    ```bash
+   # On Windows (MongoDB installed as a service)
+   net start MongoDB
+
    # On macOS (with Homebrew)
    brew services start mongodb-community
    
@@ -246,7 +249,6 @@ The application is fully responsive and optimized for:
 ## 🔒 Notes
 
 - **No Authentication**: As per requirements, this application does not include user authentication
-- **In-Memory Alternative**: While MongoDB is used, the code structure allows for easy migration to in-memory storage if needed
 - **Sample Data**: The application includes 10 sample job postings that are automatically inserted on first run
 
 ## 🚀 Deployment Considerations
@@ -272,4 +274,5 @@ This is an assessment project, but suggestions and improvements are welcome!
 
 ---
 
-**Built with ❤️ as part of a MERN Stack Developer Assessment**
+**Built with ❤️ as part of a MERN Stack Developer Technical Assessment by Aswin Sajeesh**
+
